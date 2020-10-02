@@ -29,7 +29,7 @@ export default {
           localStorage.removeItem('userToken')
           localStorage.setItem('userToken' , response.data.token);
           // correct the route to dashboard
-          this.$router.push('http://localhost:8080/')
+          this.$router.push('/dashboard')
         } else {
           this.alertMessage = "Username or password doesnt match to any user";
         }

@@ -1,10 +1,14 @@
 <template>
   <div class="products">
     <h1>Products</h1>
-    <div v-if="products">
+    <div v-if="products[0]">
       <ul>
         <div v-for="product in products" v-bind:key="product.id">
-          <li>{{ product.name }}</li>
+          <li>
+            <router-link v-bind:to="'/product/' + product.id">{{
+              product.name
+            }}</router-link>
+          </li>
         </div>
       </ul>
     </div>
