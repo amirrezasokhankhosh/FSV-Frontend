@@ -3,7 +3,7 @@
     <h1>New product</h1>
     <input type="text" v-model="name" placeholder="Name" />
     <input type="number" v-model="price" placeholder="Price" />
-    <select v-model="categoriesSelected[0]">
+    <select v-model="categoriesSelected" multiple>
       <option v-for="category in categories" v-bind:key="category.id" v-bind:value="category.id">
         {{ category.name }}
       </option>

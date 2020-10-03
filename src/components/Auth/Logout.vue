@@ -3,7 +3,7 @@ export default {
     name: 'Logout',
     mounted: function(){
         localStorage.removeItem('userToken')
-        this.$router.push('/')
+        this.$router.push('/index')
     }
 }
 </script>

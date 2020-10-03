@@ -6,7 +6,7 @@
 
 <script>
 
-import Products from '@/components/Products.vue'
+import Products from '@/components/Product/Products.vue'
 export default {
     name: 'Products_view',
     components: {
