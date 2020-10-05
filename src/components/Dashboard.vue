@@ -9,7 +9,9 @@
       <div v-if="customerRole">
         <router-link to="/customer_dashboard">Customer dashboard</router-link>
       </div>
-      <!-- if adminrole -> admin dashboard -->
+      <div v-if="adminRole">
+        <router-link to="/admin_dashboard">Admin dashboard</router-link>
+      </div>
     </div>
     <div v-else>
       <p>You need to login first.</p>
@@ -33,7 +35,7 @@ export default {
   mounted : function(){
     var userToken = localStorage.getItem("userToken");
       if (userToken) {
-        this.loginCheck = true
+        this.loginCheck = true;
         axios
           .get(
             "http://127.0.0.1:3333/roles",
@@ -50,6 +52,7 @@ export default {
               if(roles[i].name == 'Admin'){
                 this.adminRole = true;
               }
+              
             }
           });
       }
